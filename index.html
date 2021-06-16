@@ -22,6 +22,11 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="styles.scss" />
     <link rel="stylesheet" href="variables.scss" />
+    <link rel="stylesheet" href="mixin.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 
     <title>Oh My Food</title>
   </head>
@@ -30,6 +35,7 @@
       <section>
         <img src="assets/images-logo/ohmyfood.png" alt="logo-image" />
         <form action="#">
+          <span> <i class="fas fa-map-marker-alt"></i></span>
           <input type="text" value="Paris, Bellevue" />
         </form>
       </section>
@@ -46,57 +52,81 @@
     <main>
       <section>
         <h3>Fonctionnement</h3>
-        <article>Choisissez un restaurant</article>
-        <article>Composez votre menu</article>
-        <article>Dégustez au restaurant</article>
+        <article>
+          <i class="fas fa-mobile-alt"></i>Choisissez un restaurant
+        </article>
+        <article><i class="fas fa-list-ul"></i>Composez votre menu</article>
+        <article><i class="fas fa-store"></i>Dégustez au restaurant</article>
       </section>
 
       <section>
         <h3>Restaurant</h3>
         <article>
-          <img
-            height="150"
-            width="150"
-            src="assets/images-restaurant/lapalettedugout.jpg"
-            alt="image-restaurant"
-          />
-          <a href="html-palette.html">La palette du goût</a>
+          <div>
+            <a href="html-palette.html">
+              <img
+                height="150"
+                width="150"
+                src="assets/images-restaurant/lapalettedugout.jpg"
+                alt="image-restaurant"
+              />
+              La palette du goût</a
+            >
+          </div>
         </article>
         <article>
-          <img
-            height="150"
-            width="150"
-            src="assets/images-restaurant/lanoteenchantée.jpg"
-            alt="image-restaurant"
-          />
-          <a href="html-enchantee.html">La note enchantée</a>
+          <div>
+            <a href="html-enchantee.html">
+              <img
+                height="150"
+                width="150"
+                src="assets/images-restaurant/lanoteenchantée.jpg"
+                alt="image-restaurant"
+              />
+              La note enchantée</a
+            >
+          </div>
         </article>
 
         <article>
-          <img
-            height="150"
-            width="150"
-            src="assets/images-restaurant/alafrançaise.jpg"
-            alt="image-restaurant"
-          />
-
-          <a href="html-française.html"> A la française</a>
+          <div>
+            <a href="html-française.html">
+              <img
+                height="150"
+                width="150"
+                src="assets/images-restaurant/alafrançaise.jpg"
+                alt="image-restaurant"
+              />
+              A la française</a
+            >
+          </div>
         </article>
         <article>
-          <img
-            height="150"
-            width="150"
-            src="assets/images-restaurant/ledelicedessens.jpg"
-            alt="image-restaurant"
-          />
-          <a href="html-delice.html">Le delice des sens</a>
+          <div>
+            <a href="html-delice.html">
+              <img
+                height="150"
+                width="150"
+                src="assets/images-restaurant/ledelicedessens.jpg"
+                alt="image-restaurant"
+              />
+              Le delice des sens</a
+            >
+          </div>
         </article>
       </section>
     </main>
     <footer>
+      <img src="assets/images-logo/ohmyfood.png" alt="logo-image" />
       <ul>
-        <li>Proposer un restaurant</li>
-        <li>Devenir partenaire</li>
+        <span>
+          <i class="fas fa-utensils"></i>
+          <li>Proposer un restaurant</li>
+        </span>
+        <span>
+          <i class="fas fa-hands-helping"></i>
+          <li>Devenir partenaire</li>
+        </span>
         <li>Mentions légales</li>
         <a href="mail:k.begum1@gmail.com"> Contact</a>
       </ul>
