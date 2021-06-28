@@ -1,0 +1,9 @@
+@import "../utils/variables";
+
+.footer {
+  background-color: grey;
+  &-list {
+    color: #fff;
+    list-style: none;
+  }
+}

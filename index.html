@@ -16,13 +16,12 @@
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Shrikhand&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="styles.scss" />
-    <link rel="stylesheet" href="variables.scss" />
-    <link rel="stylesheet" href="mixin.scss" />
+    <link rel="stylesheet" href="assets/styles/common.css" />
+    <link rel="stylesheet" href="assets/styles/home.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -31,19 +30,21 @@
     <title>Oh My Food</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <section>
         <img src="assets/images-logo/ohmyfood.png" alt="logo-image" />
         <form action="#">
-          <span> <i class="fas fa-map-marker-alt"></i></span>
-          <input type="text" value="Paris, Bellevue" />
+          <span class="search">
+            <i class="fas fa-map-marker-alt"></i>
+           <input type="text" value="Paris, Bellevue"/>
+          </span>
         </form>
       </section>
     </header>
     <section>
       <h1>Réservez le menu qui vous convient</h1>
       <h2>
-        Découvrez des restauarnts d'exception, sélectionnés par nos soins.
+        Découvrez des restaurants d'exception, sélectionnés par nos soins.
       </h2>
       <form action="#">
         <input type="submit" value="Explorer nos restaurants" />
@@ -61,6 +62,7 @@
 
       <section>
         <h3>Restaurant</h3>
+
         <article>
           <div>
             <a href="html-palette.html">
@@ -73,6 +75,15 @@
               La palette du goût</a
             >
           </div>
+          <span class="heart-button">
+            <input type="checkbox" name="heart-resto-1" id="heart-resto-1" />
+            <label for="heart-resto-1"
+              ><span class="heart-button__empty"
+                ><i class="far fa-heart"></i> </span
+              ><span class="heart-button__filled"
+                ><i class="fas fa-heart"></i> </span
+            ></label>
+          </span>
         </article>
         <article>
           <div>
@@ -86,6 +97,15 @@
               La note enchantée</a
             >
           </div>
+          <span class="heart-button">
+            <input type="checkbox" name="heart-resto-2" id="heart-resto-2" />
+            <label for="heart-resto-2"
+              ><span class="heart-button__empty"
+                ><i class="far fa-heart"></i> </span
+              ><span class="heart-button__filled"
+                ><i class="fas fa-heart"></i> </span
+            ></label>
+          </span>
         </article>
 
         <article>
@@ -100,6 +120,15 @@
               A la française</a
             >
           </div>
+          <span class="heart-button">
+            <input type="checkbox" name="heart-resto-3" id="heart-resto-3" />
+            <label for="heart-resto-3"
+              ><span class="heart-button__empty"
+                ><i class="far fa-heart"></i> </span
+              ><span class="heart-button__filled"
+                ><i class="fas fa-heart"></i> </span
+            ></label>
+          </span>
         </article>
         <article>
           <div>
@@ -113,23 +142,32 @@
               Le delice des sens</a
             >
           </div>
+          <span class="heart-button">
+            <input type="checkbox" name="heart-resto-4" id="heart-resto-4" />
+            <label for="heart-resto-4"
+              ><span class="heart-button__empty"
+                ><i class="far fa-heart"></i> </span
+              ><span class="heart-button__filled"
+                ><i class="fas fa-heart"></i> </span
+            ></label>
+          </span>
         </article>
       </section>
     </main>
     <footer>
-      <img src="assets/images-logo/ohmyfood.png" alt="logo-image" />
-      <ul>
-        <span>
-          <i class="fas fa-utensils"></i>
-          <li>Proposer un restaurant</li>
-        </span>
-        <span>
-          <i class="fas fa-hands-helping"></i>
-          <li>Devenir partenaire</li>
-        </span>
-        <li>Mentions légales</li>
-        <a href="mail:k.begum1@gmail.com"> Contact</a>
-      </ul>
+      <section class="footer">
+        <img src="assets/images-logo/ohmyfood.png" alt="logo-image" />
+        <ul class="footer-list">
+          <span>
+            <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
+          </span>
+          <span>
+            <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
+          </span>
+          <li>Mentions légales</li>
+          <a href="mail:k.begum1@gmail.com"> Contact</a>
+        </ul>
+      </section>
     </footer>
   </body>
 </html>
