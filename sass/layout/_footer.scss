@@ -1,9 +1,30 @@
 @import "../utils/variables";
-
 .footer {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: left;
+  justify-content: left;
   background-color: grey;
+
   &-list {
     color: #fff;
     list-style: none;
+  }
+  img {
+    height: 25px;
+    width: 150px;
+    margin: 15px;
+  }
+  li {
+    margin: 15px;
+  }
+  a {
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+  }
+  li i {
+    padding: 10px;
   }
 }

@@ -1,6 +1,21 @@
+@import "../utils/variables";
+
 .header {
   text-align: center;
-  &-search {
-    border: 2px solid green;
+  &__search {
+    font-size: 20px;
+    background-color: lightgrey;
   }
+
+  input {
+    border: none;
+    font-size:20px;
+    background-color: lightgrey;
+  }
+  img {
+    height: 45px;
+    width: 250px;
+    margin: 15px;
+  }
+  
 }

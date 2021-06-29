@@ -1,0 +1,17 @@
+@import "../utils/variables";
+
+.restaurants {
+  &__card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 30px;
+    margin: 10px 20px;
+    box-shadow: 0 0 10px rgb(158, 156, 156);
+  }
+  a {
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+  }
+}
