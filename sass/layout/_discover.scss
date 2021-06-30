@@ -2,6 +2,8 @@
 
 .explore {
   text-align: center;
+  background-color: #efedeee7;
+  padding: 15px;
 }
 
 .explore-button {
@@ -28,11 +30,17 @@
     margin: 10px 20px;
     box-shadow: 0 0 10px rgb(158, 156, 156);
     padding: 15px;
+    cursor: pointer;
+    align-items: center;
   }
   i {
     color: $primary-color;
     padding: 15px;
     align-items: center;
     justify-content: center;
+  }
+
+  h2 {
+    text-align: center;
   }
 }

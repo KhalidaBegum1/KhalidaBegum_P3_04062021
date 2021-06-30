@@ -3,19 +3,24 @@
 .header {
   text-align: center;
   &__search {
-    font-size: 20px;
-    background-color: lightgrey;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e2e0e3;
   }
 
   input {
     border: none;
-    font-size:20px;
-    background-color: lightgrey;
+    font-size: 20px;
+    background-color: #e2e0e3;
   }
   img {
     height: 45px;
     width: 250px;
     margin: 15px;
   }
-  
+  i {
+    padding: 25px;
+  }
 }
