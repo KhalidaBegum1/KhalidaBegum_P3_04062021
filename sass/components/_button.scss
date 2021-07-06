@@ -1,0 +1,22 @@
+@import "../utils/variables";
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: transparent;
+  border-radius: 50px;
+  background-image: linear-gradient(to right, $secondary-color, $primary-color);
+  color: #fff;
+  font-size: 22px;
+  text-decoration: none;
+  box-shadow: 0 0 7px lighten($color: #000000, $amount: 50%);
+  transition: transform 300ms ease-in-out;
+  &__commande {
+    width: 50%;
+    margin: 3em 0 2em 7em;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}

@@ -1,1 +1,78 @@
+.explore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+p {
+  font-weight: 300;
+}
+
+.fonctionnement__list {
+  list-style-type: none;
+  padding: 0;
+  counter-reset: item-number;
+}
+.fonctionnement__list-item {
+  counter-increment: item-number;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 30px;
+  margin: 10px 20px;
+  box-shadow: 0 0 10px #9e9c9c;
+  padding: 15px;
+  cursor: pointer;
+  align-items: center;
+}
+.fonctionnement__list-item::before {
+  content: counter(item-number);
+  position: absolute;
+  left: 0;
+  transform: translateX(-50%);
+  background-color: #9356dc;
+  color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fonctionnement__list .fonctionnement__list-item--active {
+  background-color: #f5eef8;
+}
+.fonctionnement__list .fa-store {
+  color: #9356dc;
+}
+.fonctionnement i {
+  color: #16151573;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+}
+.fonctionnement h2 {
+  text-align: center;
+}
+
+.restaurant .card {
+  height: 350px;
+  position: relative;
+  margin: 20px;
+}
+.restaurant .card__image-container {
+  flex: 0 0 70%;
+}
+.restaurant .card__text-container {
+  flex: 0 0 30%;
+}
+.restaurant .heart-button {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
 /*# sourceMappingURL=home.css.map */

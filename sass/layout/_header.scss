@@ -2,12 +2,19 @@
 
 .header {
   text-align: center;
+  position: relative;
+
   &__search {
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #e2e0e3;
+  }
+  &__return {
+    position: absolute;
+    left: 2px;
+    font-size: 26px;
   }
 
   input {

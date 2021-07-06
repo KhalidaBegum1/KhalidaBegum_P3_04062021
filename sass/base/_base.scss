@@ -1,8 +1,10 @@
+@import "../utils/variables";
+
 * {
   box-sizing: border-box;
 }
 body {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-  font-size: 20px;
+  font-family: $text-font;
+  margin: 5px;
+  font-size: 18px;
 }

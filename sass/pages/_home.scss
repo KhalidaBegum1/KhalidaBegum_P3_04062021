@@ -1,0 +1,88 @@
+@import "../utils/variables";
+
+.explore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+p {
+  font-weight: 300;
+}
+
+.fonctionnement {
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    counter-reset: item-number;
+
+    &-item {
+      counter-increment: item-number;
+      position: relative;
+
+      &::before {
+        content: counter(item-number);
+        position: absolute;
+        left: 0;
+        transform: translateX(-50%);
+        background-color: $primary-color;
+        color: #fff;
+        border-radius: 50%;
+        $number-size: 30px;
+        width: $number-size;
+        height: $number-size;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      display: flex;
+      flex-direction: row;
+      background-color: white;
+      border-radius: 30px;
+      margin: 10px 20px;
+      box-shadow: 0 0 10px rgb(158, 156, 156);
+      padding: 15px;
+      cursor: pointer;
+      align-items: center;
+    }
+
+    .fonctionnement__list-item--active {
+      background-color: #f5eef8;
+    }
+    .fa-store {
+      color: $primary-color;
+    }
+  }
+
+  i {
+    color: #16151573;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.restaurant {
+  .card {
+    height: 350px;
+    position: relative;
+    margin: 20px;
+
+    &__image-container {
+      flex: 0 0 70%;
+    }
+    &__text-container {
+      flex: 0 0 30%;
+    }
+  }
+  .heart-button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+}

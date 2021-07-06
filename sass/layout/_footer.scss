@@ -3,7 +3,7 @@
   flex: 1;
   flex-direction: row;
 
-  background-color: grey;
+  background-color: rgb(88, 87, 87);
   padding: 10px;
 
   &__list {
@@ -12,11 +12,6 @@
     margin: 0;
     padding: 0;
     line-height: 1.2;
-  }
-
-  img {
-    height: 25px;
-    width: 150px;
   }
 
   a {
@@ -28,7 +23,14 @@
     margin: 0.4em;
   }
   &__icons {
-    margin: 15px;
-    
+    margin: 5px;
+    height: 25px;
+    width: 150px;
+  }
+  &__title {
+    font-family: $logo-title-font;
+    font-weight: 300;
+    font-size: 22px;
+    color: #fff;
   }
 }
