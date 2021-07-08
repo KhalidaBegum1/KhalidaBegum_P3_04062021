@@ -13,8 +13,9 @@
   box-shadow: 0 0 7px lighten($color: #000000, $amount: 50%);
   transition: transform 300ms ease-in-out;
   &__commande {
+    top: 114em;
     width: 50%;
-    margin: 3em 0 2em 7em;
+    margin: 3em 0 2em 7.5em;
   }
   &:active {
     transform: scale(0.95);

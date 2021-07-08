@@ -10,11 +10,15 @@
 
 .menu-container {
   position: relative;
-  background-color: #d2d2d2b8;
-  top: -5em;
-  bottom: 15em;
+  background-color: #f2f2f2;
+  top: -7em;
   border-radius: 70px 70px 0 0;
   padding: 15px;
+}
+.menu-container__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .menu-container__form {
   display: flex;
@@ -23,11 +27,33 @@
 .menu-container__content {
   display: flex;
   flex-direction: column;
-  border: 2px solid grey;
+  border: 2px solid #e2dddd;
   background-color: #fff;
   border-radius: 25px;
-  padding: 10px;
+  padding-left: 10px;
   margin: 10px;
+  height: 7em;
+  line-height: 1.2px;
+}
+.menu-container .input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+.menu-container__checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 23em;
+  background-color: #99e2d0;
+  color: #fff;
+  border-radius: 0 25px 25px 0;
+  width: 5em;
+  height: 6.9em;
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+  transform: translate(100%);
 }
 
 h1 {
@@ -37,6 +63,8 @@ h1 {
 h2 {
   text-transform: uppercase;
   position: relative;
+  font-size: 22px;
+  font-weight: 300;
 }
 h2::after {
   position: absolute;

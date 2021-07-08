@@ -39,6 +39,7 @@ body {
 }
 .heart-button label {
   cursor: pointer;
+  font-size: 24px;
 }
 
 .footer {
@@ -150,8 +151,9 @@ body {
   transition: transform 300ms ease-in-out;
 }
 .button__commande {
+  top: 114em;
   width: 50%;
-  margin: 3em 0 2em 7em;
+  margin: 3em 0 2em 7.5em;
 }
 .button:active {
   transform: scale(0.95);
