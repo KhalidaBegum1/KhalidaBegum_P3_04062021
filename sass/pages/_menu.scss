@@ -37,11 +37,18 @@
     height: 7em;
     line-height: 1.2px;
   }
-  .input {
-    position: absolute;
-    clip: rect(0, 0, 0, 0);
-    pointer-events: none;
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
+  &__price {
+    font-weight: bold;
+  }
+
   &__checkbox {
     display: flex;
     justify-content: center;

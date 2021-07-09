@@ -35,10 +35,16 @@
   height: 7em;
   line-height: 1.2px;
 }
-.menu-container .input {
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-  pointer-events: none;
+.menu-container__text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-container__price {
+  font-weight: bold;
 }
 .menu-container__checkbox {
   display: flex;
