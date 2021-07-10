@@ -1,0 +1,71 @@
+@import "../utils/variables";
+.menu-item {
+  &__checkbox {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    &:checked + .menu-item__label {
+      .menu-item {
+        &__text {
+          max-width: calc(100% - 7em);
+        }
+        &__checkbox-icon i {
+          transform: rotate(0);
+        }
+      }
+    }
+  }
+  &__label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid #e2dddd;
+    background-color: #fff;
+    border-radius: 25px;
+    height: 7em;
+    overflow: hidden;
+  }
+
+  &__text {
+    display: flex;
+    flex: 1 0 100%;
+    max-width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    transition: max-width ease-in-out 0.5s;
+  }
+  &__title,
+  &__subtitle {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__subtitle {
+    font-weight: 300;
+  }
+
+  &__checkbox-icon {
+    width: 7em;
+    min-width: 7em;
+    background-color: $tiercery-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    i {
+      font-size: 1.5em;
+      transform: rotate(-180deg);
+      transition: transform ease-in-out 0.5s;
+    }
+  }
+
+  &__details {
+    display: inline-flex;
+    justify-content: space-between;
+  }
+
+}
+  
+
+ 

@@ -24,43 +24,6 @@
   display: flex;
   flex-direction: column;
 }
-.menu-container__content {
-  display: flex;
-  flex-direction: column;
-  border: 2px solid #e2dddd;
-  background-color: #fff;
-  border-radius: 25px;
-  padding-left: 10px;
-  margin: 10px;
-  height: 7em;
-  line-height: 1.2px;
-}
-.menu-container__text {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: 300;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menu-container__price {
-  font-weight: bold;
-}
-.menu-container__checkbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 23em;
-  background-color: #99e2d0;
-  color: #fff;
-  border-radius: 0 25px 25px 0;
-  width: 5em;
-  height: 6.9em;
-  transform-origin: left;
-  transition: transform 0.5s ease-in-out;
-  transform: translate(100%);
-}
 
 h1 {
   font-family: Shrikhand;
@@ -79,6 +42,62 @@ h2::after {
   content: "";
   width: 60px;
   border-bottom: 4px solid #99e2d0;
+}
+
+.menu-item__checkbox {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+.menu-item__checkbox:checked + .menu-item__label .menu-item__text {
+  max-width: calc(100% - 7em);
+}
+.menu-item__checkbox:checked + .menu-item__label .menu-item__checkbox-icon i {
+  transform: rotate(0);
+}
+.menu-item__label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 2px solid #e2dddd;
+  background-color: #fff;
+  border-radius: 25px;
+  height: 7em;
+  overflow: hidden;
+}
+.menu-item__text {
+  display: flex;
+  flex: 1 0 100%;
+  max-width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  transition: max-width ease-in-out 0.5s;
+}
+.menu-item__title, .menu-item__subtitle {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu-item__subtitle {
+  font-weight: 300;
+}
+.menu-item__checkbox-icon {
+  width: 7em;
+  min-width: 7em;
+  background-color: #99e2d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.menu-item__checkbox-icon i {
+  font-size: 1.5em;
+  transform: rotate(-180deg);
+  transition: transform ease-in-out 0.5s;
+}
+.menu-item__details {
+  display: inline-flex;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=menu.css.map */
