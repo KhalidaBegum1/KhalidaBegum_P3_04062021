@@ -1,4 +1,5 @@
 @import "../utils/variables";
+@import "../components/loader";
 .image-container {
   width: 100%;
   height: 24em;
@@ -25,6 +26,10 @@
   &__form {
     display: flex;
     flex-direction: column;
+    @media screen and(min-width: 960px) {
+      display: grid;
+      grid-template-columns: repeat(3, 33%);
+    }
   }
 }
 

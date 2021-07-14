@@ -1,3 +1,38 @@
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
 .image-container {
   width: 100%;
   height: 24em;
@@ -23,6 +58,12 @@
 .menu-container__form {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 960px) {
+  .menu-container__form {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+  }
 }
 
 h1 {
@@ -61,8 +102,13 @@ h2::after {
   border: 2px solid #e2dddd;
   background-color: #fff;
   border-radius: 25px;
-  height: 7em;
+  height: 4.5em;
   overflow: hidden;
+  margin: 10px;
+}
+.menu-item__label:hover {
+  border-color: #99e2d0;
+  transform: scale(1.02);
 }
 .menu-item__text {
   display: flex;
@@ -71,7 +117,7 @@ h2::after {
   flex-direction: column;
   justify-content: space-between;
   padding: 10px;
-  transition: max-width ease-in-out 0.5s;
+  transition: max-width ease-in-out 0.3s;
 }
 .menu-item__title, .menu-item__subtitle {
   white-space: nowrap;
@@ -92,8 +138,8 @@ h2::after {
 }
 .menu-item__checkbox-icon i {
   font-size: 1.5em;
-  transform: rotate(-180deg);
-  transition: transform ease-in-out 0.5s;
+  transform: rotate(180deg);
+  transition: transform ease-in-out 0.6s;
 }
 .menu-item__details {
   display: inline-flex;

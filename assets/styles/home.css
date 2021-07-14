@@ -1,15 +1,84 @@
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
 .explore {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin: 2em;
 }
 
 p {
   font-weight: 300;
 }
 
+@media screen and (min-width: 599px) {
+  .fonctionnement {
+    background-color: hotpink;
+    display: grid;
+  }
+  .fonctionnement__list {
+    display: grid;
+    grid-template-columns: repeat(3, 40%);
+    overflow-x: auto;
+  }
+}
+@media screen and (min-width: 991px) {
+  .fonctionnement {
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .fonctionnement__list {
+    display: grid;
+    grid-template-rows: repeat(3, 33%);
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .fonctionnement h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+  .fonctionnement__list-item {
+    width: 20em;
+  }
+}
 .fonctionnement__list {
   list-style-type: none;
   padding: 0;
@@ -27,6 +96,10 @@ p {
   padding: 15px;
   cursor: pointer;
   align-items: center;
+}
+.fonctionnement__list-item:hover {
+  color: #99e2d0;
+  transform: scale(1.02);
 }
 .fonctionnement__list-item::before {
   content: counter(item-number);
@@ -58,6 +131,27 @@ p {
   text-align: center;
 }
 
+@media screen and (min-width: 599px) {
+  .restaurant .card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 50%);
+    overflow-x: auto;
+  }
+}
+@media screen and (min-width: 960px) {
+  .restaurant .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+  .restaurant .card:hover {
+    color: #99e2d0;
+    transform: scale(1.02);
+  }
+  .restaurant h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+}
 .restaurant .card {
   height: 350px;
   position: relative;

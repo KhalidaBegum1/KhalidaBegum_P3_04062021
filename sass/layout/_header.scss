@@ -3,13 +3,21 @@
 .header {
   text-align: center;
   position: relative;
+  &__nav{
+    height: 4em;
+    box-shadow: 0 0 5px rgb(129, 125, 125);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
 
   &__search {
-    height: 40px;
+    height: 3em;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #e2e0e3;
+    background-color: #eaeaea;
   }
   &__return {
     position: absolute;
@@ -20,7 +28,7 @@
   input {
     border: none;
     font-size: 20px;
-    background-color: #e2e0e3;
+    background-color: #eaeaea;
   }
   img {
     height: 45px;
@@ -28,6 +36,7 @@
     margin: 15px;
   }
   i {
+    font-size: 22px;
     padding: 25px;
   }
 }

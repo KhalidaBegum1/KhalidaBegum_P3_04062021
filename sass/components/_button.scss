@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
+  margin:3em;
   border: transparent;
   border-radius: 50px;
   background-image: linear-gradient(to right, $secondary-color, $primary-color);
@@ -16,6 +17,10 @@
     top: 114em;
     width: 50%;
     margin: 3em 0 2em 7.5em;
+    @media screen and(min-width: 960px) {
+      width: 75%;
+      margin: 3em 0 2em 16.5em;
+    }
   }
   &:active {
     transform: scale(0.95);
