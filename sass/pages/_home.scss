@@ -112,7 +112,7 @@ p {
       overflow-x: auto;
     }
   }
-  @media screen and(min-width: 960px) {
+  @media screen and(min-width: 991px) {
     .card-container {
       display: grid;
       grid-template-columns: repeat(2, 50%);
@@ -139,6 +139,11 @@ p {
     }
     &__text-container {
       flex: 0 0 30%;
+    }
+    .badge {
+      position: absolute;
+      right: 20px;
+      top: 10px;
     }
   }
   .heart-button {

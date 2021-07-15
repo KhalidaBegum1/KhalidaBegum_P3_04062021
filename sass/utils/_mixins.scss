@@ -1,1 +1,14 @@
+@mixin tablette-only {
+  @media screen and (min-width: 599px) and(max-width:991px) {
+    @content;
+  }
+}
 
+@mixin hidden {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

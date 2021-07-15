@@ -1,8 +1,8 @@
 @import "../utils/variables";
+@import "../utils/mixins";
 .menu-item {
   &__checkbox {
-    position: absolute;
-    clip: rect(0, 0, 0, 0);
+    @include hidden;
     &:checked + .menu-item__label {
       .menu-item {
         &__text {
