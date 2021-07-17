@@ -12,3 +12,7 @@
   height: 1px;
   overflow: hidden;
 }
+
+@mixin desktop-header{
+  justify-content: unset;
+}

@@ -1,13 +1,13 @@
 .lds-ripple {
-  display: inline-block;
+  display: flex;
   position: relative;
   width: 80px;
   height: 80px;
 }
 
 .lds-ripple div {
-  position: absolute;
-  border: 4px solid #fff;
+  position: fixed;
+  border: 6px solid #ff79da;
   opacity: 1;
   border-radius: 50%;
   animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
@@ -76,6 +76,7 @@
 
 h1 {
   font-family: Shrikhand;
+  font-weight: 200;
 }
 
 h2 {
