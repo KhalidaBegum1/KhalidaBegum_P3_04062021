@@ -1,8 +1,12 @@
 @import "../utils/variables";
-.badge{
-    border-radius: 2px;
-    background-color: $tiercery-color;
-    display:inline-flex;
-    padding:5px;
-
+.badge {
+  border-radius: 2px;
+  background-color: $tiercery-color;
+  display: inline-flex;
+  padding: 5px;
+  color: #4ba18d;
+  &:hover {
+    transform: rotate(360deg);
+    transition: 3s;
+  }
 }

@@ -177,6 +177,7 @@ body {
   .button__commande {
     width: 75%;
     margin: 3em 0 2em 16.5em;
+    align-self: center;
   }
 }
 .button:active {
@@ -185,17 +186,20 @@ body {
 
 .lds-ripple {
   display: flex;
-  position: relative;
-  width: 80px;
-  height: 80px;
+  position: fixed;
+  width: 100px;
+  height: 100px;
 }
 
 .lds-ripple div {
+  display: flex;
   position: fixed;
-  border: 6px solid #ff79da;
+  border: 6px solid #9356dc;
   opacity: 1;
   border-radius: 50%;
-  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  animation: lds-ripple 3s cubic-bezier(0, 0.2, 0.8, 1) 3s;
+  margin-left: 50%;
+  margin-top: 50%;
 }
 
 .lds-ripple div:nth-child(2) {
@@ -204,18 +208,16 @@ body {
 
 @keyframes lds-ripple {
   0% {
-    top: 36px;
-    left: 36px;
+    top: 56px;
+    left: 56px;
     width: 0;
     height: 0;
-    opacity: 1;
   }
   100% {
     top: 0px;
     left: 0px;
-    width: 72px;
-    height: 72px;
-    opacity: 0;
+    width: 92px;
+    height: 92px;
   }
 }
 

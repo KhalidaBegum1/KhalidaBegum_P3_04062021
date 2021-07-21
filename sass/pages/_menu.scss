@@ -12,6 +12,9 @@
 }
 
 .menu-container {
+  @include tablette-only {
+    margin: 4em;
+  }
   position: relative;
   background-color: #f2f2f2;
   top: -7em;
@@ -38,8 +41,12 @@
   &__desserts {
     @include tablette-only {
       display: grid;
-      grid-template-columns: repeat(4, 33%);
-      overflow-x: auto;
+      grid-template-columns: 25% 70%;
+      grid-gap: 10px;
+      margin: 1em;
+      h2 {
+        align-self: center;
+      }
     }
   }
 }
