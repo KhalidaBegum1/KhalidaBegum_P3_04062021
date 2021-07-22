@@ -72,10 +72,8 @@
 }
 .apparition-progressive {
   @include mobile-only {
-    &:hover {
-      transition-delay: 1s;
-      animation: apparition 4s;
-    }
+    transition-delay: 1s;
+    animation: apparition 4s;
 
     @keyframes apparition {
       from {

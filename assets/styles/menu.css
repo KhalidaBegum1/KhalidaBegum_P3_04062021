@@ -13,7 +13,7 @@
   opacity: 1;
   border-radius: 50%;
   animation: lds-ripple 1.2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-  animation-iteration-count: 3;
+  animation-iteration-count: 2;
 }
 @media screen and (min-width: 991px) {
   .lds-ripple div {
@@ -85,7 +85,7 @@
     display: grid;
     grid-template-columns: 25% 70%;
     grid-gap: 10px;
-    margin: 1em;
+    margin: 2em;
   }
   .menu-container__entree h2, .menu-container__plats h2, .menu-container__desserts h2 {
     align-self: center;
@@ -177,7 +177,7 @@ h2::after {
 }
 
 @media screen and (max-width: 599px) {
-  .apparition-progressive:hover {
+  .apparition-progressive {
     transition-delay: 1s;
     animation: apparition 4s;
   }
