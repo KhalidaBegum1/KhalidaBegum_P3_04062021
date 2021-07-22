@@ -1,35 +1,45 @@
-.lds-hourglass {
+.lds-ripple {
   display: flex;
   position: fixed;
-  left: 50%;
-  top: 50%;
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
 }
 
-.lds-hourglass:after {
-  content: " ";
-  display: block;
+.lds-ripple div {
+  position: fixed;
+  border: 5px solid #99e2d0;
+  margin-left: 50%;
+  margin-top: 50%;
+  opacity: 1;
   border-radius: 50%;
-  width: 0;
-  height: 0;
-  margin: 8px;
-  box-sizing: border-box;
-  border: 32px solid #99e2d0;
-  border-color: #ff79da transparent #99e2d0 transparent;
-  animation: lds-hourglass 1.2s 3s;
+  animation: lds-ripple 1.2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  animation-iteration-count: 3;
+}
+@media screen and (min-width: 991px) {
+  .lds-ripple div {
+    margin-left: 50%;
+    margin-top: 25%;
+  }
 }
 
-@keyframes lds-hourglass {
+.lds-ripple div:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+@keyframes lds-ripple {
   0% {
-    transform: rotate(0);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
     opacity: 1;
   }
   100% {
-    transform: rotate(1800deg);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    opacity: 0;
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 1;
   }
 }
 .explore {

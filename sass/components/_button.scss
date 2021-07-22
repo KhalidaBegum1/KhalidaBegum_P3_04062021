@@ -15,11 +15,12 @@
   transition: transform 300ms ease-in-out;
   &__commande {
     @media screen and(min-width: 991px) {
-      width: 75%;
+      width: 50%;
       margin: 3em 0 2em 16.5em;
       align-self: center;
     }
   }
+
   &:active {
     transform: scale(0.95);
   }
