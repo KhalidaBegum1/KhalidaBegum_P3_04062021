@@ -8,6 +8,11 @@ body {
   font-size: 18px;
 }
 
+main .header {
+  max-width: 70em;
+  margin: 0;
+}
+
 .heart-button {
   position: relative;
 }
@@ -163,7 +168,7 @@ body {
   align-self: center;
   justify-content: center;
   padding: 20px;
-  margin-top: 30px;
+  margin: 30px;
   border: transparent;
   border-radius: 50px;
   background-image: linear-gradient(#ff79da, #9356dc);
@@ -172,13 +177,6 @@ body {
   text-decoration: none;
   box-shadow: 0 0 7px gray;
   transition: transform 300ms ease-in-out;
-}
-@media screen and (min-width: 991px) {
-  .button__commande {
-    width: 50%;
-    margin: 3em 0 2em 16.5em;
-    align-self: center;
-  }
 }
 .button:active {
   transform: scale(0.95);
@@ -227,6 +225,9 @@ body {
     height: 72px;
     opacity: 1;
   }
+}
+.loader-container {
+  background-color: gray;
 }
 
 /*# sourceMappingURL=common.css.map */

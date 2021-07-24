@@ -21,3 +21,7 @@
 @mixin desktop-header {
   justify-content: unset;
 }
+
+@mixin footer-margin {
+  margin: 0em 2em -7em 2em;
+}

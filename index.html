@@ -43,33 +43,36 @@
     </header>
 
     <main>
-      <section class="explore">
-        <h1>Réservez le menu qui vous convient</h1>
-        <p>
-          Découvrez des restaurants d'exception, sélectionnés par nos soins.
-        </p>
-        <a class="button" href="#restaurant">Explorer nos restaurants</a>
-      </section>
-      <section class="fonctionnement">
-        <h1>Fonctionnement</h1>
-        <ul class="fonctionnement__list">
-          <li class="fonctionnement__list-item">
-            <span>
-              <i class="fas fa-mobile-alt"></i>Choisissez un restaurant</span
+      <div class="introduction">
+        <section class="explore">
+          <h1>Réservez le menu qui vous convient</h1>
+          <p>
+            Découvrez des restaurants d'exception, sélectionnés par nos soins.
+          </p>
+          <a class="button" href="#restaurant">Explorer nos restaurants</a>
+        </section>
+        <section class="fonctionnement">
+          <h1>Fonctionnement</h1>
+          <ul class="fonctionnement__list">
+            <li class="fonctionnement__list-item">
+              <span>
+                <i class="fas fa-mobile-alt"></i>Choisissez un restaurant</span
+              >
+            </li>
+            <li class="fonctionnement__list-item">
+              <span><i class="fas fa-list-ul"></i>Composez votre menu</span>
+            </li>
+
+            <li
+              class="
+                fonctionnement__list-item fonctionnement__list-item--active
+              "
             >
-          </li>
-          <li class="fonctionnement__list-item">
-            <span><i class="fas fa-list-ul"></i>Composez votre menu</span>
-          </li>
-
-          <li
-            class="fonctionnement__list-item fonctionnement__list-item--active"
-          >
-            <span><i class="fas fa-store"></i>Dégustez au restaurant</span>
-          </li>
-        </ul>
-      </section>
-
+              <span><i class="fas fa-store"></i>Dégustez au restaurant</span>
+            </li>
+          </ul>
+        </section>
+      </div>
       <section class="restaurant">
         <h1>Restaurants</h1>
         <div class="card-container">
@@ -128,7 +131,7 @@
           </article>
 
           <article class="card">
-            <a class="card__link" href="html-française.html">
+            <a class="card__link" href="html-francaise.html">
               <div class="card__image-container">
                 <img
                   class="card__image"
@@ -201,10 +204,11 @@
         </ul>
       </section>
     </footer>
-
-    <div class="lds-ripple">
-      <div></div>
-      <div></div>
+    <div class="loader-container">
+      <div class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
     </div>
   </body>
 </html>

@@ -42,6 +42,10 @@
     opacity: 1;
   }
 }
+.loader-container {
+  background-color: gray;
+}
+
 .explore {
   display: flex;
   flex-direction: column;
@@ -53,8 +57,11 @@
 @media screen and (min-width: 991px) {
   .explore {
     display: grid;
-    grid-template-columns: repeat(3, 30%);
-    padding: 25px;
+    grid-template-rows: repeat(3, 30%);
+    padding: 20px;
+  }
+  .explore h1 {
+    font-size: 32px;
   }
 }
 
@@ -62,8 +69,16 @@ p {
   font-weight: 300;
 }
 
+@media screen and (min-width: 991px) {
+  .introduction {
+    display: flex;
+    flex-direction: row;
+    background-image: linear-gradient(to left, #99e2d0, #fff);
+  }
+}
+
 .fonctionnement {
-  margin: 10px;
+  margin: 20px;
 }
 .fonctionnement c {
   display: grid;
@@ -73,11 +88,21 @@ p {
   grid-template-columns: repeat(3, 40%);
   overflow-x: auto;
 }
+@media screen and (min-width: 559px) {
+  .fonctionnement__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
 @media screen and (min-width: 991px) {
   .fonctionnement {
-    background-color: #f2f2f2;
     display: flex;
     align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .fonctionnement__list {
     display: grid;
@@ -115,7 +140,6 @@ p {
   max-width: 30em;
 }
 .fonctionnement__list-item:hover {
-  color: #99e2d0;
   transform: scale(1.02);
 }
 .fonctionnement__list-item::before {
@@ -167,7 +191,6 @@ p {
     max-width: 30em;
   }
   .restaurant .card:hover {
-    color: #99e2d0;
     transform: scale(1.02);
   }
   .restaurant h1 {

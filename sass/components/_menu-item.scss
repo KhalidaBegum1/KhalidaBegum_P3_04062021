@@ -23,7 +23,7 @@
     border-radius: 25px;
     height: 4.5em;
     overflow: hidden;
-    margin: 10px;
+    margin: 20px;
 
     &:hover {
       border-color: $tiercery-color;
@@ -71,20 +71,18 @@
   }
 }
 .apparition-progressive {
-  @include mobile-only {
-    transition-delay: 1s;
-    animation: apparition 4s;
+  transition-delay: 1s;
+  animation: apparition 4s;
 
-    @keyframes apparition {
-      from {
-        transform: translateY(20px);
-        opacity: 0;
-      }
+  @keyframes apparition {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
 
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
+    to {
+      transform: translateY(0);
+      opacity: 1;
     }
   }
 }

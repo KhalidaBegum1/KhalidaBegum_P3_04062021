@@ -10,16 +10,26 @@
   margin: 2em;
   @media screen and(min-width: 991px) {
     display: grid;
-    grid-template-columns: repeat(3, 30%);
-    padding: 25px;
+    grid-template-rows: repeat(3, 30%);
+    padding: 20px;
+    h1 {
+      font-size: $font-size;
+    }
   }
 }
 p {
   font-weight: 300;
 }
+.introduction {
+  @media screen and(min-width: 991px) {
+    display: flex;
+    flex-direction: row;
+    background-image: linear-gradient(to left, $tiercery-color, #fff);
+  }
+}
 
 .fonctionnement {
-  margin: 10px;
+  margin: 20px;
   c {
     display: grid;
 
@@ -29,10 +39,21 @@ p {
       overflow-x: auto;
     }
   }
+  @media screen and (min-width: 559px) {
+    &__list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
   @media screen and(min-width: 991px) {
-    background-color: #f2f2f2;
     display: flex;
     align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 
     &__list {
       display: grid;
@@ -59,7 +80,6 @@ p {
       counter-increment: item-number;
       position: relative;
       &:hover {
-        color: $tiercery-color;
         transform: scale(1.02);
       }
 
@@ -127,7 +147,6 @@ p {
     .card {
       max-width: 30em;
       &:hover {
-        color: $tiercery-color;
         transform: scale(1.02);
       }
     }

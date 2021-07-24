@@ -42,6 +42,10 @@
     opacity: 1;
   }
 }
+.loader-container {
+  background-color: gray;
+}
+
 .image-container {
   width: 100%;
   height: 24em;
@@ -58,10 +62,13 @@
   top: -7em;
   border-radius: 70px 70px 0 0;
   padding: 15px;
+  margin: 0em 2em -7em 2em;
 }
 @media screen and (min-width: 599px) and (max-width: 991px) {
   .menu-container {
-    margin: 4em;
+    margin: 0em 4em -5em 4em;
+    border-radius: 70px 70px 70px 70px;
+    box-shadow: 0px 0px 1.5125em #99e2d0;
   }
 }
 .menu-container__heading {
@@ -75,9 +82,11 @@
 }
 @media screen and (min-width: 991px) {
   .menu-container__form {
-    display: grid;
-    grid-template-columns: repeat(3, 33%);
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1em;
   }
 }
 @media screen and (min-width: 599px) and (max-width: 991px) {
@@ -89,6 +98,11 @@
   }
   .menu-container__entree h2, .menu-container__plats h2, .menu-container__desserts h2 {
     align-self: center;
+  }
+}
+@media screen and (min-width: 991px) {
+  .menu-container__entree, .menu-container__plats, .menu-container__desserts {
+    max-width: 30%;
   }
 }
 
@@ -135,7 +149,7 @@ h2::after {
   border-radius: 25px;
   height: 4.5em;
   overflow: hidden;
-  margin: 10px;
+  margin: 20px;
 }
 .menu-item__label:hover {
   border-color: #99e2d0;
@@ -176,20 +190,18 @@ h2::after {
   justify-content: space-between;
 }
 
-@media screen and (max-width: 599px) {
-  .apparition-progressive {
-    transition-delay: 1s;
-    animation: apparition 4s;
+.apparition-progressive {
+  transition-delay: 1s;
+  animation: apparition 4s;
+}
+@keyframes apparition {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
   }
-  @keyframes apparition {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
