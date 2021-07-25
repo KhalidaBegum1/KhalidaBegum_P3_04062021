@@ -25,3 +25,17 @@
 @mixin footer-margin {
   margin: 0em 2em -7em 2em;
 }
+
+@mixin blink-animation {
+  &:hover {
+    animation: blink 0.5s linear 0.5s;
+  }
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+    80% {
+      opacity: 0.5;
+    }
+  }
+}

@@ -87,10 +87,6 @@
     border-radius: 70px;
     box-shadow: 0 0 10px #99e2d0;
   }
-  .menu-container:hover {
-    transform: rotateX(360deg);
-    transition: 3s;
-  }
 }
 @media screen and (min-width: 991px) {
   .menu-container {

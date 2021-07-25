@@ -4,6 +4,7 @@
 $card-radius: 35px;
 
 .card {
+  @include blink-animation;
   display: flex;
   flex-direction: column;
 

@@ -144,6 +144,17 @@ main .header {
   display: flex;
   flex-direction: column;
 }
+.card:hover {
+  animation: blink 0.5s linear 0.5s;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.5;
+  }
+}
 .card__link {
   height: inherit;
   display: flex;
