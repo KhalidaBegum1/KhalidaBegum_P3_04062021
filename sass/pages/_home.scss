@@ -24,7 +24,7 @@ p {
   @media screen and(min-width: 991px) {
     display: flex;
     flex-direction: row;
-    background-image: linear-gradient(to left, $tiercery-color, #fff);
+    background-image: linear-gradient(#fff, #99e2d06e, #fff);
   }
 }
 
@@ -37,6 +37,12 @@ p {
       display: grid;
       grid-template-columns: repeat(3, 40%);
       overflow-x: auto;
+      &-item {
+        &:hover {
+          transform: scale(1.02);
+          box-shadow: 0 0 10px $tiercery-color;
+        }
+      }
     }
   }
   @media screen and (min-width: 559px) {
@@ -45,6 +51,12 @@ p {
       flex-direction: row;
       align-items: center;
       justify-content: center;
+      span {
+        display: flex;
+        align-items: center;
+        height: 3.6em;
+        line-height: 1.5;
+      }
     }
   }
 
@@ -81,6 +93,7 @@ p {
       position: relative;
       &:hover {
         transform: scale(1.02);
+        box-shadow: 0 0 10px $tiercery-color;
       }
 
       &::before {

@@ -98,6 +98,7 @@ main .header {
 @media screen and (min-width: 991px) {
   .header__nav {
     justify-content: unset;
+    box-shadow: none;
   }
 }
 .header__search {
@@ -105,11 +106,13 @@ main .header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #eaeaea;
+  background-color: #f2f2f2;
 }
 @media screen and (min-width: 991px) {
   .header__search {
     justify-content: unset;
+    background-color: #fff;
+    box-shadow: 0 0 10px #99e2d0;
   }
 }
 .header__return {
@@ -120,7 +123,12 @@ main .header {
 .header input {
   border: none;
   font-size: 20px;
-  background-color: #eaeaea;
+  background-color: #f2f2f2;
+}
+@media screen and (min-width: 991px) {
+  .header input {
+    background-color: #fff;
+  }
 }
 .header img {
   height: 45px;
@@ -145,6 +153,10 @@ main .header {
   box-shadow: 0 0 10px #ac8d8d;
   text-decoration: none;
   color: unset;
+}
+.card__link:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px #99e2d0;
 }
 .card__image {
   object-fit: cover;
@@ -192,18 +204,11 @@ main .header {
 .lds-ripple div {
   position: fixed;
   border: 5px solid #99e2d0;
-  margin-left: 50%;
-  margin-top: 50%;
-  opacity: 1;
+  margin: 50%;
+  opacity: 0;
   border-radius: 50%;
   animation: lds-ripple 1.2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
   animation-iteration-count: 2;
-}
-@media screen and (min-width: 991px) {
-  .lds-ripple div {
-    margin-left: 50%;
-    margin-top: 25%;
-  }
 }
 
 .lds-ripple div:nth-child(2) {
@@ -227,7 +232,32 @@ main .header {
   }
 }
 .loader-container {
-  background-color: gray;
+  background-color: #fff;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  animation: loader-container 0.5s ease-out 2.7s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes loader-container {
+  99% {
+    display: none;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=common.css.map */

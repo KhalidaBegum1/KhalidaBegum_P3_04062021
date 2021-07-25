@@ -1,8 +1,12 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
 $card-radius: 35px;
 
 .card {
   display: flex;
   flex-direction: column;
+
   &__link {
     height: inherit;
     display: flex;
@@ -12,6 +16,10 @@ $card-radius: 35px;
     box-shadow: 0 0 10px rgb(172, 141, 141);
     text-decoration: none;
     color: unset;
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 10px $tiercery-color;
+    }
   }
 
   &__image {

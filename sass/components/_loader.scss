@@ -9,17 +9,12 @@
 .lds-ripple div {
   position: fixed;
   border: 5px solid $tiercery-color;
-  margin-left: 50%;
-  margin-top: 50%;
-  opacity: 1;
+  margin: 50%;
+
+  opacity: 0;
   border-radius: 50%;
   animation: lds-ripple 1.2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
   animation-iteration-count: 2;
-
-  @media screen and(min-width: 991px) {
-    margin-left: 50%;
-    margin-top: 25%;
-  }
 }
 .lds-ripple div:nth-child(2) {
   animation-delay: 0.4s;
@@ -32,6 +27,7 @@
     height: 0;
     opacity: 1;
   }
+
   100% {
     top: 0px;
     left: 0px;
@@ -41,5 +37,30 @@
   }
 }
 .loader-container {
-  background-color: gray;
+  background-color: #fff;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  animation: loader-container 0.5s ease-out 2.7s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes loader-container {
+  99% {
+    display: none;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
 }
