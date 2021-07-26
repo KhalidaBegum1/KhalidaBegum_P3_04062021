@@ -112,7 +112,7 @@ main .header {
   .header__search {
     justify-content: unset;
     background-color: #fff;
-    box-shadow: 0 0 10px #99e2d0;
+    box-shadow: 0 0 3px #99e2d0;
   }
 }
 .header__return {

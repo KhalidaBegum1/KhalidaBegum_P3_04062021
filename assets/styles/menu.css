@@ -87,10 +87,16 @@
     border-radius: 70px;
     box-shadow: 0 0 10px #99e2d0;
   }
+  .menu-container:hover {
+    transform: scale(1.01);
+  }
 }
 @media screen and (min-width: 991px) {
   .menu-container {
     box-shadow: 0 -2px 10px #99e2d0;
+  }
+  .menu-container:hover {
+    transform: scale(1.01);
   }
 }
 .menu-container__heading {

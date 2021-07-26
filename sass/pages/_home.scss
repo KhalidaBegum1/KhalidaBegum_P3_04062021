@@ -91,9 +91,13 @@ p {
     &-item {
       counter-increment: item-number;
       position: relative;
+      &:active {
+        background-color: #f5eef8;
+        color: $primary-color;
+      }
       &:hover {
         transform: scale(1.02);
-        box-shadow: 0 0 10px $tiercery-color;
+        box-shadow: 0 0 10px $primary-color;
       }
 
       &::before {
@@ -144,7 +148,6 @@ p {
 }
 
 .restaurant {
-  
   margin: 10px;
   @media screen and (min-width: 599px) {
     .card-container {
