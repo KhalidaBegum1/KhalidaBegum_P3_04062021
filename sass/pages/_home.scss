@@ -1,5 +1,6 @@
 @import "../utils/variables";
 @import "../components/loader";
+@import "../utils/mixins";
 
 .explore {
   display: flex;
@@ -21,10 +22,14 @@ p {
   font-weight: 300;
 }
 .introduction {
+  @media screen and (min-width: 559px) {
+    @include gradient;
+  }
+
   @media screen and(min-width: 991px) {
+    @include gradient;
     display: flex;
     flex-direction: row;
-    background-image: linear-gradient(#fff, #99e2d06e, #fff);
   }
 }
 

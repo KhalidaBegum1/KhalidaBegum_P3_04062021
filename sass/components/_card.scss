@@ -4,7 +4,6 @@
 $card-radius: 35px;
 
 .card {
-  @include blink-animation;
   display: flex;
   flex-direction: column;
 
@@ -19,6 +18,7 @@ $card-radius: 35px;
     color: unset;
     &:hover {
       transform: scale(1.02);
+      transition: ease-in-out;
       box-shadow: 0 0 10px $tiercery-color;
     }
   }

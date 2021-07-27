@@ -8,9 +8,17 @@ body {
   font-size: 18px;
 }
 
-main .header {
+main,
+header {
   max-width: 70em;
-  margin: 0;
+  margin: auto;
+}
+@media screen and (min-width: 991px) {
+  main,
+header {
+    max-width: 70em;
+    margin: auto;
+  }
 }
 
 .heart-button {
@@ -112,7 +120,7 @@ main .header {
   .header__search {
     justify-content: unset;
     background-color: #fff;
-    box-shadow: 0 0 3px #99e2d0;
+    box-shadow: 1px 1px 5px #99e2d0;
   }
 }
 .header__return {
@@ -144,17 +152,6 @@ main .header {
   display: flex;
   flex-direction: column;
 }
-.card:hover {
-  animation: blink 0.5s linear 0.5s;
-}
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-  80% {
-    opacity: 0.5;
-  }
-}
 .card__link {
   height: inherit;
   display: flex;
@@ -167,6 +164,7 @@ main .header {
 }
 .card__link:hover {
   transform: scale(1.02);
+  transition: ease-in-out;
   box-shadow: 0 0 10px #99e2d0;
 }
 .card__image {
@@ -207,13 +205,14 @@ main .header {
 
 .lds-ripple {
   display: flex;
-  position: fixed;
+  position: absolute;
   width: 90px;
   height: 90px;
+  margin: 50%;
 }
 
 .lds-ripple div {
-  position: fixed;
+  position: absolute;
   border: 5px solid #99e2d0;
   margin: 50%;
   opacity: 0;
@@ -252,22 +251,22 @@ main .header {
   bottom: 0;
   justify-content: center;
   align-items: center;
-  animation: loader-container 0.5s ease-out 2.7s;
+  animation: loader-container 2.5s both linear;
   animation-fill-mode: forwards;
 }
 
 @keyframes loader-container {
-  99% {
-    display: none;
-    width: 0;
-    height: 0;
+  90% {
     opacity: 1;
   }
+  99% {
+    width: 100%;
+    height: 100%;
+  }
   100% {
-    display: none;
     width: 0;
     height: 0;
-    opacity: 1;
+    opacity: 0;
   }
 }
 

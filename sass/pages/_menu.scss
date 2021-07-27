@@ -16,11 +16,11 @@
     margin: 0em 4em -5em 4em;
     border-radius: 70px;
     box-shadow: 0 0 10px $tiercery-color;
-    @include transform-scale;
+    @include gradient;
   }
   @media screen and(min-width: 991px) {
     box-shadow: 0 -2px 10px $tiercery-color;
-    @include transform-scale;
+    @include gradient;
   }
   position: relative;
   background-color: #f2f2f2;
