@@ -1,0 +1,31 @@
+@mixin tablette-only {
+  @media screen and (min-width: 599px) and(max-width:991px) {
+    @content;
+  }
+}
+@mixin mobile-only {
+  @media screen and (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin hidden {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+@mixin desktop-header {
+  justify-content: unset;
+}
+
+@mixin footer-margin {
+  margin: 0em 2em -7em 2em;
+}
+
+@mixin gradient{
+  background-image: linear-gradient(#fff, #99e2d06e, #fff);
+}

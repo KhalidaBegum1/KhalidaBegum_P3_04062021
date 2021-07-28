@@ -1,0 +1,36 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+.heart-button {
+  position: relative;
+  input {
+    @include hidden;
+    &:checked + label .heart-button {
+      &__empty {
+        opacity: 0;
+      }
+      &__filled {
+        opacity: 1;
+      }
+    }
+  }
+  &__empty {
+    opacity: 1;
+  }
+  &__filled {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    background-image: linear-gradient($primary-color, $secondary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  &__empty,
+  &__filled {
+    transition: opacity 300ms ease-in-out;
+  }
+  label {
+    cursor: pointer;
+    font-size: 24px;
+  }
+}

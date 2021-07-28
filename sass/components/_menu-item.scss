@@ -1,0 +1,88 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+.menu-item {
+  &__checkbox {
+    @include hidden;
+    &:checked + .menu-item__label {
+      .menu-item {
+        &__text {
+          max-width: calc(100% - 7em);
+        }
+        &__checkbox-icon i {
+          transform: rotate(0);
+        }
+      }
+    }
+  }
+  &__label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid #e2dddd;
+    background-color: #fff;
+    border-radius: 25px;
+    height: 4.5em;
+    overflow: hidden;
+    margin: 20px;
+
+    &:hover {
+      border-color: $tiercery-color;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex: 1 0 100%;
+    max-width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    transition: max-width ease-in-out 0.3s;
+  }
+  &__title,
+  &__subtitle {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__subtitle {
+    font-weight: 300;
+  }
+
+  &__checkbox-icon {
+    width: 7em;
+    min-width: 7em;
+    background-color: $tiercery-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    i {
+      font-size: 1.5em;
+      transform: rotate(-180deg);
+      transition: transform ease-in-out 0.6s;
+    }
+  }
+
+  &__details {
+    display: inline-flex;
+    justify-content: space-between;
+  }
+}
+.apparition-progressive {
+  transition-delay: 1s;
+  animation: apparition 4s;
+
+  @keyframes apparition {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

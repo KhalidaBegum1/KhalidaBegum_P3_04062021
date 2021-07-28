@@ -1,0 +1,273 @@
+.lds-ripple {
+  display: flex;
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  margin: 50%;
+}
+
+.lds-ripple div {
+  position: absolute;
+  border: 5px solid #99e2d0;
+  margin: 50%;
+  opacity: 0;
+  border-radius: 50%;
+  animation: lds-ripple 1.2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  animation-iteration-count: 2;
+}
+
+.lds-ripple div:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 1;
+  }
+}
+.loader-container {
+  background-color: #fff;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  animation: loader-container 2.5s both linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes loader-container {
+  90% {
+    opacity: 1;
+  }
+  99% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+}
+.explore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 2em;
+}
+@media screen and (min-width: 991px) {
+  .explore {
+    display: grid;
+    grid-template-rows: repeat(3, 30%);
+    padding: 20px;
+  }
+  .explore h1 {
+    font-size: 32px;
+  }
+}
+
+p {
+  font-weight: 300;
+}
+
+@media screen and (min-width: 559px) {
+  .introduction {
+    background-image: linear-gradient(#fff, #99e2d06e, #fff);
+  }
+}
+@media screen and (min-width: 991px) {
+  .introduction {
+    background-image: linear-gradient(#fff, #99e2d06e, #fff);
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.fonctionnement {
+  margin: 20px;
+}
+.fonctionnement c {
+  display: grid;
+}
+.fonctionnement c__list {
+  display: grid;
+  grid-template-columns: repeat(3, 40%);
+  overflow-x: auto;
+}
+.fonctionnement c__list-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px #99e2d0;
+}
+@media screen and (min-width: 559px) {
+  .fonctionnement__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .fonctionnement__list span {
+    display: flex;
+    align-items: center;
+    height: 3.6em;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 991px) {
+  .fonctionnement {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .fonctionnement__list {
+    display: grid;
+    grid-template-rows: repeat(3, 33%);
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .fonctionnement h1 {
+    font-size: 32px;
+    text-align: center;
+    margin: 1em;
+  }
+  .fonctionnement__list-item {
+    width: 20em;
+  }
+}
+.fonctionnement__list {
+  list-style-type: none;
+  padding: 0;
+  counter-reset: item-number;
+}
+.fonctionnement__list-item {
+  counter-increment: item-number;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 30px;
+  margin: 10px 20px;
+  box-shadow: 0 0 10px #9e9c9c;
+  padding: 15px;
+  cursor: pointer;
+  align-items: center;
+  max-width: 30em;
+}
+.fonctionnement__list-item:active {
+  background-color: #f5eef8;
+  color: #9356dc;
+}
+.fonctionnement__list-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px #9356dc;
+}
+.fonctionnement__list-item::before {
+  content: counter(item-number);
+  position: absolute;
+  left: 0;
+  transform: translateX(-50%);
+  background-color: #9356dc;
+  color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fonctionnement__list .fonctionnement__list-item--active {
+  background-color: #f5eef8;
+}
+.fonctionnement__list .fa-store {
+  color: #9356dc;
+}
+.fonctionnement i {
+  color: #16151573;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+}
+.fonctionnement h2 {
+  text-align: center;
+}
+
+.restaurant {
+  margin: 10px;
+}
+@media screen and (min-width: 599px) {
+  .restaurant .card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 50%);
+    overflow-x: auto;
+  }
+}
+@media screen and (min-width: 991px) {
+  .restaurant .card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+  }
+  .restaurant .card {
+    max-width: 30em;
+  }
+  .restaurant .card:hover {
+    transform: scale(1.02);
+  }
+  .restaurant h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+}
+.restaurant .card {
+  height: 285px;
+  position: relative;
+  margin: 20px;
+}
+.restaurant .card__image-container {
+  flex: 0 0 70%;
+}
+.restaurant .card__text-container {
+  flex: 0 0 30%;
+}
+.restaurant .card .badge {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+.restaurant .heart-button {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.badge {
+  border-radius: 2px;
+  background-color: #99e2d0;
+  display: inline-flex;
+  padding: 5px;
+  color: #4ba18d;
+}
+.badge:hover {
+  transform: rotate(360deg);
+  transition: 3s;
+}
+
+/*# sourceMappingURL=home.css.map */

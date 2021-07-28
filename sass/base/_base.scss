@@ -1,0 +1,20 @@
+@import "../utils/variables";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: $text-font;
+  margin: 0;
+  font-size: 18px;
+}
+
+main,
+header {
+  max-width: 70em;
+  margin: auto;
+  @media screen and (min-width: 991px) {
+    max-width: 70em;
+    margin: auto;
+  }
+}

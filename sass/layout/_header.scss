@@ -1,0 +1,55 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.header {
+  text-align: center;
+  position: relative;
+  &__nav {
+    height: 4em;
+    box-shadow: 0 0 5px rgb(129, 125, 125);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @media screen and(min-width: 991px) {
+      @include desktop-header;
+      box-shadow: none;
+    }
+  }
+
+  &__search {
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    @media screen and(min-width: 991px) {
+      @include desktop-header;
+      background-color: #fff;
+      box-shadow: 1px 1px 5px $tiercery-color;
+    }
+  }
+  &__return {
+    position: absolute;
+    left: 2px;
+    font-size: 26px;
+  }
+
+  input {
+    border: none;
+    font-size: 20px;
+    background-color: #f2f2f2;
+    @media screen and(min-width: 991px) {
+      background-color: #fff;
+    }
+  }
+  img {
+    height: 45px;
+    width: 250px;
+    margin: 15px;
+  }
+  i {
+    font-size: 22px;
+    padding: 25px;
+  }
+}

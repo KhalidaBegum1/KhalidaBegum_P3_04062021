@@ -1,0 +1,203 @@
+@import "../utils/variables";
+@import "../components/loader";
+@import "../utils/mixins";
+
+.explore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 2em;
+  @media screen and(min-width: 991px) {
+    display: grid;
+    grid-template-rows: repeat(3, 30%);
+    padding: 20px;
+    h1 {
+      font-size: $font-size;
+    }
+  }
+}
+p {
+  font-weight: 300;
+}
+.introduction {
+  @media screen and (min-width: 559px) {
+    @include gradient;
+  }
+
+  @media screen and(min-width: 991px) {
+    @include gradient;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.fonctionnement {
+  margin: 20px;
+  c {
+    display: grid;
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 40%);
+      overflow-x: auto;
+      &-item {
+        &:hover {
+          transform: scale(1.02);
+          box-shadow: 0 0 10px $tiercery-color;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 559px) {
+    &__list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      span {
+        display: flex;
+        align-items: center;
+        height: 3.6em;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  @media screen and(min-width: 991px) {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__list {
+      display: grid;
+      grid-template-rows: repeat(3, 33%);
+      grid-template-columns: auto;
+      align-items: center;
+      justify-content: space-between;
+    }
+    h1 {
+      font-size: $font-size;
+      text-align: center;
+      margin: 1em;
+    }
+    &__list-item {
+      width: 20em;
+    }
+  }
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    counter-reset: item-number;
+
+    &-item {
+      counter-increment: item-number;
+      position: relative;
+      &:active {
+        background-color: #f5eef8;
+        color: $primary-color;
+      }
+      &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 10px $primary-color;
+      }
+
+      &::before {
+        content: counter(item-number);
+        position: absolute;
+        left: 0;
+        transform: translateX(-50%);
+        background-color: $primary-color;
+        color: #fff;
+        border-radius: 50%;
+        $number-size: 30px;
+        width: $number-size;
+        height: $number-size;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      display: flex;
+      flex-direction: row;
+      background-color: white;
+      border-radius: 30px;
+      margin: 10px 20px;
+      box-shadow: 0 0 10px rgb(158, 156, 156);
+      padding: 15px;
+      cursor: pointer;
+      align-items: center;
+      max-width: 30em;
+    }
+
+    .fonctionnement__list-item--active {
+      background-color: #f5eef8;
+    }
+    .fa-store {
+      color: $primary-color;
+    }
+  }
+
+  i {
+    color: #16151573;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.restaurant {
+  margin: 10px;
+  @media screen and (min-width: 599px) {
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(4, 50%);
+      overflow-x: auto;
+    }
+  }
+  @media screen and(min-width: 991px) {
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(4, 25%);
+    }
+    .card {
+      max-width: 30em;
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+
+    h1 {
+      font-size: $font-size;
+      text-align: center;
+    }
+  }
+  .card {
+    height: 285px;
+    position: relative;
+    margin: 20px;
+
+    &__image-container {
+      flex: 0 0 70%;
+    }
+    &__text-container {
+      flex: 0 0 30%;
+    }
+    .badge {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+    }
+  }
+  .heart-button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+}

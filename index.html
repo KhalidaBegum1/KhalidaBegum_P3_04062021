@@ -11,14 +11,204 @@
     <meta name="author" content="Khalida Begum" />
     <link
       rel="shortcut icon"
-      href="assets/images/ohmyfood@2x.svg"
+      href="assets/images-logo/ohmyfood@2x.svg"
       type="image/svg+xml"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/common.css" />
+    <link rel="stylesheet" href="assets/styles/home.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
     <title>Oh My Food</title>
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header class="header">
+      <nav class="header__nav">
+        <img src="assets/images-logo/ohmyfood.png" alt="logo-image" />
+      </nav>
+      <form action="#">
+        <span class="header__search">
+          <i class="fas fa-map-marker-alt"></i>
+          <input type="text" value="Paris, Bellevue" />
+        </span>
+      </form>
+    </header>
+
+    <main>
+      <div class="introduction">
+        <section class="explore">
+          <h1>Réservez le menu qui vous convient</h1>
+          <p>
+            Découvrez des restaurants d'exception, sélectionnés par nos soins.
+          </p>
+          <a class="button" href="#restaurant">Explorer nos restaurants</a>
+        </section>
+        <section class="fonctionnement">
+          <h1>Fonctionnement</h1>
+          <ul class="fonctionnement__list">
+            <li class="fonctionnement__list-item">
+              <span>
+                <i class="fas fa-mobile-alt"></i>Choisissez un restaurant</span
+              >
+            </li>
+            <li class="fonctionnement__list-item">
+              <span><i class="fas fa-list-ul"></i>Composez votre menu</span>
+            </li>
+
+            <li
+              class="
+                fonctionnement__list-item fonctionnement__list-item--active
+              "
+            >
+              <span><i class="fas fa-store"></i>Dégustez au restaurant</span>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <section class="restaurant">
+        <h1>Restaurants</h1>
+        <div class="card-container">
+          <article class="card">
+            <a class="card__link" href="html-palette.html">
+              <div class="card__image-container">
+                <img
+                  class="card__image"
+                  src="assets/images-restaurant/lapalettedugout.jpg"
+                  alt="photo plat restaurant la palette du gout"
+                />
+              </div>
+              <div class="card__text-container">
+                <h3>La palette du goût</h3>
+                <p>Ménilmontant</p>
+              </div>
+              <span class="badge">Nouveau</span>
+            </a>
+
+            <span class="heart-button">
+              <input type="checkbox" name="heart-resto-1" id="heart-resto-1" />
+              <label for="heart-resto-1"
+                ><span class="heart-button__empty"
+                  ><i class="far fa-heart"></i> </span
+                ><span class="heart-button__filled"
+                  ><i class="fas fa-heart"></i> </span
+              ></label>
+            </span>
+          </article>
+
+          <article class="card">
+            <a class="card__link" href="html-enchantee.html">
+              <div class="card__image-container">
+                <img
+                  class="card__image"
+                  src="assets/images-restaurant/lanoteenchantee.jpg"
+                  alt="photo plat restaurant la note enchantée"
+                />
+              </div>
+              <div class="card__text-container">
+                <h3>La note enchantée</h3>
+                <p>Charonne</p>
+              </div>
+              <span class="badge">Nouveau</span>
+            </a>
+
+            <span class="heart-button">
+              <input type="checkbox" name="heart-resto-2" id="heart-resto-2" />
+              <label for="heart-resto-2"
+                ><span class="heart-button__empty"
+                  ><i class="far fa-heart"></i> </span
+                ><span class="heart-button__filled"
+                  ><i class="fas fa-heart"></i> </span
+              ></label>
+            </span>
+          </article>
+
+          <article class="card">
+            <a class="card__link" href="html-francaise.html">
+              <div class="card__image-container">
+                <img
+                  class="card__image"
+                  src="assets/images-restaurant/alafrancaise.jpg"
+                  alt="photo plat restaurant A la française"
+                />
+              </div>
+              <div class="card__text-container">
+                <h3>A la française</h3>
+                <p>Cité Rouge</p>
+              </div>
+            </a>
+            <span class="heart-button">
+              <input type="checkbox" name="heart-resto-3" id="heart-resto-3" />
+              <label for="heart-resto-3"
+                ><span class="heart-button__empty"
+                  ><i class="far fa-heart"></i> </span
+                ><span class="heart-button__filled"
+                  ><i class="fas fa-heart"></i> </span
+              ></label>
+            </span>
+          </article>
+
+          <article class="card">
+            <a class="card__link" href="html-delice.html">
+              <div class="card__image-container">
+                <img
+                  class="card__image"
+                  src="assets/images-restaurant/ledelicedessens.jpg"
+                  alt="photo plat restaurant le delice des sens"
+                />
+              </div>
+              <div class="card__text-container">
+                <h3>Le délice des sens</h3>
+                <p>Folie-Méricourt</p>
+              </div>
+            </a>
+            <span class="heart-button">
+              <input type="checkbox" name="heart-resto-4" id="heart-resto-4" />
+              <label for="heart-resto-4"
+                ><span class="heart-button__empty"
+                  ><i class="far fa-heart"></i> </span
+                ><span class="heart-button__filled"
+                  ><i class="fas fa-heart"></i> </span
+              ></label>
+            </span>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="footer">
+        <h1 class="footer__title">ohmyfood</h1>
+        <ul class="footer__list">
+          <li class="footer__links">
+            <span class="footer__icons"><i class="fas fa-utensils"></i></span>
+            Proposer un restaurant
+          </li>
+
+          <li class="footer__links">
+            <span class="footer__icons"
+              ><i class="fas fa-hands-helping"> </i></span
+            >Devenir partenaire
+          </li>
+
+          <li class="footer__links">Mentions légales</li>
+          <li class="footer__links">
+            <a href="mail:k.begum1@gmail.com"> Contact</a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+    <div class="loader-container">
+      <div class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
   </body>
 </html>

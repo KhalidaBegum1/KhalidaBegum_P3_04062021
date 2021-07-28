@@ -1,0 +1,36 @@
+@import "../utils/variables";
+.footer {
+  flex: 1;
+  flex-direction: row;
+
+  background-color: rgb(88, 87, 87);
+  padding: 10px;
+
+  &__list {
+    color: #fff;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+  }
+
+  a {
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+  }
+  &__links {
+    margin: 0.4em;
+  }
+  &__icons {
+    margin: 5px;
+    height: 25px;
+    width: 150px;
+  }
+  &__title {
+    font-family: $logo-title-font;
+    font-weight: 300;
+    font-size: 22px;
+    color: #fff;
+  }
+}
