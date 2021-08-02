@@ -11,9 +11,13 @@
   color: #fff;
   font-size: 22px;
   text-decoration: none;
-  box-shadow: 0 0 7px lighten($color: #000000, $amount: 50%);
+  box-shadow: 5px 5px 5px #cecaca;
   transition: transform 300ms ease-in-out;
 
+  &:hover {
+    box-shadow: 5px 5px 5px darken($color: #cecaca, $amount: 30%);
+    background-image: linear-gradient(#ff99e2, #ad80e5);
+  }
   &:active {
     transform: scale(0.95);
   }
