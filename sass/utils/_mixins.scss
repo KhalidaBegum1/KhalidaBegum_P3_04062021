@@ -23,9 +23,9 @@
 }
 
 @mixin footer-margin {
-  margin: 0em 2em -7em 2em;
+  margin-bottom: -7em;
 }
 
-@mixin gradient{
+@mixin gradient {
   background-image: linear-gradient(#fff, #99e2d06e, #fff);
 }

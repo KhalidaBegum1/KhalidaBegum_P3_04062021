@@ -146,6 +146,7 @@ header {
 .header i {
   font-size: 22px;
   padding: 25px;
+  color: #000;
 }
 
 .card {
@@ -196,8 +197,12 @@ header {
   color: #fff;
   font-size: 22px;
   text-decoration: none;
-  box-shadow: 0 0 7px gray;
+  box-shadow: 5px 5px 5px #cecaca;
   transition: transform 300ms ease-in-out;
+}
+.button:hover {
+  box-shadow: 5px 5px 5px #857b7b;
+  background-image: linear-gradient(#ff99e2, #ad80e5);
 }
 .button:active {
   transform: scale(0.95);
